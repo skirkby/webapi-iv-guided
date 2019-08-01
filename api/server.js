@@ -23,6 +23,7 @@ server.get('/', async (req, res) => {
 server.post('/', async (req, res) => {
   try {
     const [id] = await db('shouts').insert(req.body);
+    console.log(req.body);
     const shouts = await db('shouts');
 
     res.status(201).json(shouts);
