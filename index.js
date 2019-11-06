@@ -7,3 +7,9 @@ server.listen(port, () => {
   console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
 });
  
+const {id} = req.params;
+if (id) {
+  // do good things
+} else {
+  // don't do good stuff.
+}
